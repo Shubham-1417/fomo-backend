@@ -1,0 +1,9 @@
+=> 
+[32m#<Post:0x00007f5299806e28[0m
+ id: [34m[1m1[0m,
+ user_id: [34m[1m1[0m,
+ title: [31m[1m"[0m[31mFirst Post[0m[31m[1m"[0m,
+ content: [31m[1m"[0m[31mThis is the content of the post.[0m[31m[1m"[0m,
+ scope: [31m[1m"[0m[31mglobal[0m[31m[1m"[0m,
+ created_at: [31m[1m"[0m[31m2025-01-05 14:41:21.000702000 +0000[0m[31m[1m"[0m,
+ updated_at: [31m[1m"[0m[31m2025-01-05 14:41:21.000702000 +0000[0m[31m[1m"[0m[32m>[0m
