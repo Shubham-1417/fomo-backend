@@ -25,6 +25,6 @@ Rails.application.routes.draw do
   # Health check route for the app
   get "up", to: "rails/health#show", as: :rails_health_check
 
-  # Set the root route (e.g., show posts by default)
+
   root "posts#index"
 end

@@ -46,8 +46,8 @@ class Api::V1::CommentsController < ApplicationController
   end
 
   def current_user
-    # Implement logic for fetching the current user, e.g., via API token or session
-    @current_user ||= User.find_by(id: session[:user_id]) # Example: Change according to your auth mechanism
+    
+    @current_user ||= User.find_by(id: session[:user_id]) 
   end
 
   def comment_params
