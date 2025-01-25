@@ -1,9 +1,0 @@
-=> 
-[32m#<Post:0x00007fa6d2b0d918[0m
- id: [36m[1mnil[0m,
- user_id: [34m[1m1[0m,
- title: [31m[1m"[0m[31mFirst Post[0m[31m[1m"[0m,
- content: [31m[1m"[0m[31mThis is the content of the post.[0m[31m[1m"[0m,
- scope: [31m[1m"[0m[31mglobal[0m[31m[1m"[0m,
- created_at: [36m[1mnil[0m,
- updated_at: [36m[1mnil[0m[32m>[0m

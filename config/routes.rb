@@ -19,12 +19,16 @@ Rails.application.routes.draw do
         # Search for posts
         get :search, on: :collection
       end
+
+      # Tag routes
+      resources :tags, only: [:index]
+      get 'tags/:tag_id/posts', to: 'tags#posts_by_tag'
     end
   end
 
   # Health check route for the app
   get "up", to: "rails/health#show", as: :rails_health_check
 
-
-  root "posts#index"
+  # Root route
+  root to: redirect("/api/v1/posts")
 end

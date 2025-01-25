@@ -1,7 +1,7 @@
 class User < ApplicationRecord
     # Adds methods to set and authenticate against a bcrypt password.
     has_secure_password
-  
+    
     # Validations for user attributes
     validates :pseudonym, presence: true, uniqueness: true
     validates :password, presence: true, length: { minimum: 6 }

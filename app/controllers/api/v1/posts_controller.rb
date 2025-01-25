@@ -19,6 +19,7 @@ module Api
       def create
         post = Post.new(post_params)
         if post.save
+          post.tags = find_or_create_tags(params[:tags]) if params[:tags].present?
           render json: post, status: :created
         else
           render json: { errors: post.errors.full_messages }, status: :unprocessable_entity
@@ -29,6 +30,7 @@ module Api
       def update
         post = Post.find(params[:id])
         if post.update(post_params)
+          post.tags = find_or_create_tags(params[:tags]) if params[:tags].present?
           render json: post, status: :ok
         else
           render json: { errors: post.errors.full_messages }, status: :unprocessable_entity
@@ -54,6 +56,10 @@ module Api
       end
 
       private
+
+      def find_or_create_tags(tag_names)
+        tag_names.map { |name| Tag.find_or_create_by(name: name.strip.downcase) }
+      end
 
       def post_params
         params.require(:post).permit(:title, :content, :scope, :user_id)
